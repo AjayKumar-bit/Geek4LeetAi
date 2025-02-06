@@ -1,0 +1,43 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true,
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:storybook/recommended",
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest",
+    "project": "tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true,
+    },
+  },
+  "plugins": ["react", "@typescript-eslint", "react-hooks", "react-require"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "semi": "error",
+    "no-undef": "error",
+    "react-hooks/exhaustive-deps": "off",
+    "no-use-before-define": "off",
+    "comma-dangle": "off",
+    "object-curly-spacing": ["error", "always"],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-uses-react": "off",
+  },
+  "settings": {
+    "react": {
+      "version": "detect",
+    },
+  },
+}
